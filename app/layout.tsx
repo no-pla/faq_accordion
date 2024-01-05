@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const workSans = Work_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "faq accordion",
@@ -19,7 +19,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon-32x32.png" sizes="any" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={workSans.className}>{children}</body>
     </html>
   );
 }

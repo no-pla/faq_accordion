@@ -14,7 +14,11 @@ const config: Config = {
       lightPink: "#F8EEFF",
       white: "#FFFFFF",
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        cardShadow: "0 23px 56px rgba(80, 0, 118, 0.1)",
+      },
+    },
   },
   plugins: [],
 };

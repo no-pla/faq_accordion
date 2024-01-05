@@ -1,3 +1,9 @@
+import Card from "./components/Card";
+
 export default function Home() {
-  return <main>메인 페이지</main>;
+  return (
+    <main className="bg-lightPink h-screen flex justify-center items-center">
+      <Card />
+    </main>
+  );
 }
