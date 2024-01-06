@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Star from "../../public/icon-star.svg";
+import Accordion from "./Accordion";
 
 const FAQs = [
   {
@@ -20,20 +21,26 @@ const FAQs = [
   },
   {
     index: 3,
-    q: "How can I get help if I'm stuck on a Frontend Mentor challenge?",
+    q: "How can I get help if I'm stuck on a challenge?",
     a: "The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members.",
   },
 ];
 
 const Card = () => {
   return (
-    <div className="p-10 bg-white rounded-2xl shadow-cardShadow">
-      <div className="flex mb-8 gap-[24px]">
-        <Image src={Star} alt="star" width={40} height={40} />
-        <h2 className="text-darkPurple text-[56px] font-bold">FAQs</h2>
+    <section className="p-10 bg-white rounded-2xl shadow-cardShadow w-[90%] max-w-[600px] sm:p-6">
+      <div className="flex mb-8 gap-[24px] items-center sm:mb-6">
+        <div className="w-[40px] h-[40px] sm:w-[24px] sm:h-[24px]">
+          <Image src={Star} alt="star icon" />
+        </div>
+        <h2 className="text-darkPurple text-[56px] font-bold sm:text-[32px]">
+          FAQs
+        </h2>
       </div>
-      <div>faq 아코디언</div>
-    </div>
+      {FAQs.map(({ q, a, index }) => {
+        return <Accordion question={q} answer={a} key={index} index={index} />;
+      })}
+    </section>
   );
 };
 
