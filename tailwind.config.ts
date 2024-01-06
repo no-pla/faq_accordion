@@ -21,6 +21,10 @@ const config: Config = {
       boxShadow: {
         cardShadow: "0 23px 56px rgba(80, 0, 118, 0.1)",
       },
+      backgroundImage: {
+        desktop: 'url("/background-pattern-desktop.svg")',
+        mobile: 'url("/background-pattern-mobile.svg")',
+      },
     },
   },
   plugins: [],

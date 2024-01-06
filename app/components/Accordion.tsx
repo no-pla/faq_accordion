@@ -39,7 +39,7 @@ const Accordion = ({ question, answer, index }: qna) => {
         )}
       </div>
       {toggle && (
-        <p className="text-palePurple text-base text-[14px]">{answer}</p>
+        <p className="text-palePurple text-base text-[14px] pt-6">{answer}</p>
       )}
     </article>
   );
